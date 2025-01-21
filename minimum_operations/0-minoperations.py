@@ -5,13 +5,15 @@
 def minOperations(n):
     """Find the minimum operations to reach for n"""
     operation = 0
-    actuel = 1
+    divisor = 2
 
-    while (actuel < n):
-        if (n / actuel):
-            operation += 1
-            memoire = actuel
-        actuel += memoire
-        operation += 1
+    if n <= 1:
+        return 0
+
+    while (n > 1):
+        while n % divisor == 0:
+            operation += divisor
+            n //= divisor
+        divisor += 1
 
     return operation
