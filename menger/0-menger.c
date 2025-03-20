@@ -14,7 +14,7 @@ char check_char(int row, int col)
 	while (row > 0 || col > 0)
 	{
 		if (row % 3 == 1 && col % 3 == 1)
-			return ' ';
+			return (' ');
 		row /= 3;
 		col /= 3;
 	}
