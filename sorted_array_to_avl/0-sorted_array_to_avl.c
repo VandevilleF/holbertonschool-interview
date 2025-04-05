@@ -9,6 +9,7 @@
 avl_t *create_node(avl_t *parent, int value)
 {
 	avl_t *node = malloc(sizeof(avl_t));
+
 	if (!node)
 		return (NULL);
 
@@ -37,6 +38,7 @@ avl_t *avl_build_tree(int *array, int start, int end, avl_t *parent)
 	/*Get the middle index of the current sub-array*/
 	int mid = (start + end) / 2;
 	avl_t *root = create_node(parent, array[mid]);
+
 	if (!root)
 		return (NULL);
 
