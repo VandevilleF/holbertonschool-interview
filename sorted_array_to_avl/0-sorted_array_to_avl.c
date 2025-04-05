@@ -12,7 +12,7 @@ avl_t *create_node(avl_t *parent, int value)
 	if (!node)
 		return (NULL);
 
-	// Initialize the node fields
+	/*Initialize the node fields*/
 	node->n = value;
 	node->parent = parent;
 	node->left = NULL;
@@ -34,13 +34,13 @@ avl_t *avl_build_tree(int *array, int start, int end, avl_t *parent)
 	if (start > end)
 		return (NULL);
 
-	// Get the middle index of the current sub-array
+	/*Get the middle index of the current sub-array*/
 	int mid = (start + end) / 2;
 	avl_t *root = create_node(parent, array[mid]);
 	if (!root)
 		return (NULL);
 
-	// Recursively build subtree using half of the array
+	/*Recursively build subtree using half of the array*/
 	root->left = avl_build_tree(array, start, mid - 1, root);
 	root->right = avl_build_tree(array, mid + 1, end, root);
 
@@ -58,6 +58,6 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	if (!array || size == 0)
 		return (NULL);
 
-	// Start building the tree from the full array, root has no parent (NULL)
+	/*Start building the tree from the full array, root has no parent (NULL)*/
 	return (avl_build_tree(array, 0, (int)size - 1, NULL));
 }
