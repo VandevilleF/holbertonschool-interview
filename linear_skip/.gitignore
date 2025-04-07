@@ -1,2 +1,5 @@
 0-main.c
 0-linear_skip
+create_skiplist.c
+free_skiplist.c
+print_skiplist.c
