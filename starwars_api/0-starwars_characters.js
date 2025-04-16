@@ -20,7 +20,7 @@ request(url, (error, response, body) => {
   printCharacterName(characters, 0);
 });
 
-function printCharacterName(characters, index) {
+function printCharacterName (characters, index) {
   if (index >= characters.length) {
     return;
   }
