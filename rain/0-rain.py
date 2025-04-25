@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
 def rain(walls):
+    """Given a list of non-negative integers
+    representing the heights of walls with unit width 1"""
     # Si la liste est vide ou trop courte, retourner 0
     if not walls or len(walls) < 3:
         return 0
