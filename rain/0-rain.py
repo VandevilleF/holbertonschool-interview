@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Rain modules
+"""
 
 def rain(walls):
     """Given a list of non-negative integers
